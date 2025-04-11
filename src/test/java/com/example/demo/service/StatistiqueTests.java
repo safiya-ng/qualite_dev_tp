@@ -33,4 +33,9 @@ public class StatistiqueTests {
         when(statistiqueImpl.prixMoyen()).thenReturn(new Echantillon(2, 2000));
     }
 
+    @Test
+    void exception(){
+        when(statistiqueImpl.prixMoyen()).thenThrow(ArithmeticException.class);
+    }
+
 }
