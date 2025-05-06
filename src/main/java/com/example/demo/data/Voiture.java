@@ -1,13 +1,9 @@
 package com.example.demo.data;
 
-import javax.persistence.*;
-
-@Entity
 public class Voiture {
 
     String marque;
     int prix;
-    int id;
 
     public Voiture(){
     }
@@ -15,16 +11,6 @@ public class Voiture {
     public Voiture(String marque, int prix) {
         this.marque = marque;
         this.prix = prix;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getMarque() {
@@ -48,7 +34,6 @@ public class Voiture {
         return "Car{" +
                 "marque='" + marque + '\'' +
                 ", prix=" + prix +
-                ", id=" + id +
                 '}';
     }
 }

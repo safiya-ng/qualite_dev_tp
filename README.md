@@ -240,6 +240,11 @@ Coder une classe controller qui réagit à deux requêtes HTTP :
 - GET sur /statistique et qui retourne un objet du type échantillon
 - POST qui permet d'ajouter une nouvelle voiture
 
+curl --header "Content-Type: application/json" \
+--request POST \
+--data '{"marque":"f","prix":100}' \  
+http://localhost:8080/voiture
+
 ## Test du Web service
 
 Créer dans le dossier test un package web. Implentez-y une classe de test pour le Web service.
